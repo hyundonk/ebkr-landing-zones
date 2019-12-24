@@ -13,11 +13,8 @@ resource_groups_hub = {
 	resourcegroup_name_operations       = "-operations"
 	resourcegroup_name_firewall         = "-firewall"
 	resourcegroup_name_activedirectory	= "-activedirectory"
-	resourcegroup_name_appgateway		    = "-appgateway"
-	resourcegroup_name_keyvault		      = "-keyvault"
 	resourcegroup_name_monitor		      = "-monitor"
 	resourcegroup_name_management		    = "-management"
-	resourcegroup_name_azurefirewall	  = "-azurefirewall"
 	resourcegroup_name_security_monitor	= "-security-monitor"
 }
 

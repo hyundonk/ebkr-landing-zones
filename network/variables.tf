@@ -37,11 +37,3 @@ variable "adminpassword" {
 
 }
 
-variable "ip_prefixes_onprem_mdc" {
-
-}
-
-variable "ip_prefixes_onprem_ptc" {
-
-}
-
