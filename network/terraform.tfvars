@@ -26,11 +26,6 @@ networking_object = {
       cidr                = "10.10.0.160/27"
       service_endpoints   = []
     }
-    subnet_azurefirewall    = {
-      name                = "AzureFirewallSubnet"
-      cidr                = "10.10.4.0/25"
-      service_endpoints   = []
-    }
   }
   subnets = {
     subnet_fwext            = {
@@ -48,11 +43,17 @@ networking_object = {
       cidr                = "10.10.0.128/27"
       service_endpoints   = []
     }
-    subnet_appservice       = {
-      name                = "service-appservice"
-      cidr                = "10.10.5.0/27"
+    subnet_servicegroup1        = {
+      name                = "service-group1"
+      cidr                = "10.10.1.0/24"
       service_endpoints   = []
     }
+    subnet_servicegroup2        = {
+      name                = "service-group2"
+      cidr                = "10.10.2.0/24"
+      service_endpoints   = []
+    }
+ 
   }
 }
 

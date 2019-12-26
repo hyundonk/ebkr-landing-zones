@@ -16,6 +16,7 @@ resource_groups_hub = {
 	resourcegroup_name_monitor		      = "-monitor"
 	resourcegroup_name_management		    = "-management"
 	resourcegroup_name_security_monitor	= "-security-monitor"
+	resourcegroup_name_services       	= "-services"
 }
 
 location_map = {
