@@ -27,3 +27,11 @@ output "ddos_protection" {
 output "public_ip_prefix" {
   value = module.public_ip_prefix.public_ip_prefix
 }
+
+output "flowlog_storage_account_id" {
+  value = module.network_monitoring.storage_account_id
+}
+
+output "flowlog_workspace_id" {
+  value = module.network_monitoring.workspace_id
+}

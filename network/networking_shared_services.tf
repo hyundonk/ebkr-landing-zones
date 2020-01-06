@@ -36,13 +36,6 @@ module "virtual_network" {
   ddos_protection_standard          = module.ddos_protection_std.ddos_protection
 }
 
-module "networkwatcher" {
-  source  = "./networkwatcher"
-  
-  location                          = local.location_map["region1"]
-  tags                              = local.tags
-}
-
 module "network_monitoring" {
   source  = "./network_monitoring"
   
