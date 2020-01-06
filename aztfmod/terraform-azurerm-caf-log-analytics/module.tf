@@ -1,5 +1,11 @@
+resource "random_string" "random_postfix" {
+    length  = 3
+    upper   = false
+    special = false
+}
+
 resource "azurerm_log_analytics_workspace" "log_analytics" {
-  name                = "${var.prefix}${var.name}"
+  name                = "${var.prefix}${var.name}${random_string.random_postfix.result}"
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = "PerGB2018"
