@@ -44,4 +44,7 @@ variable "azure_diagnostics_logs_retention" {
           description = "Retention period to keep the diagnostics Logs in the Azure Storage Account"
 }
 
+variable "asr_diags" {
+  description = "(Required) Map with the diagnostics settings for ASR deployment"
+}
 

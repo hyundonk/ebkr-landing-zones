@@ -40,6 +40,10 @@ output "location_map" {
   }
 }
 
+output "recovery_vault_name" {
+  value = module.recoveryservicesvault_backup.object.name
+}
+
 output "tags" {
   value = var.tags_hub
 }

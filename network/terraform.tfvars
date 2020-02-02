@@ -53,7 +53,16 @@ networking_object = {
       cidr                = "10.10.2.0/24"
       service_endpoints   = []
     }
- 
+    subnet_fwtest_client        = {
+      name                = "fwtest-client"
+      cidr                = "10.10.3.0/24"
+      service_endpoints   = []
+    }
+    subnet_fwtest_server        = {
+      name                = "fwtest-server"
+      cidr                = "10.10.4.0/24"
+      service_endpoints   = []
+    }
   }
 }
 
