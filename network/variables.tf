@@ -3,8 +3,12 @@ variable "lowerlevel_storage_account_name" {}
 variable "lowerlevel_container_name" {}
 variable "lowerlevel_resource_group_name" {}
 
+variable "workspace" {}
 
 #### blueprint_networking_shared_services
+
+variable "resource_groups_network" {}
+
 variable "networking_object" {
   description = "Network configuration object for shared services"
 }
