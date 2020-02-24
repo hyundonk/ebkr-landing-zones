@@ -26,23 +26,26 @@ resource "azurerm_log_analytics_workspace" "flowlog" {
 }
 
 module "network_monitoring_vm" {
-  source                            = "../../modules/vm"
+	source 														= "git://github.com/hyundonk/aztf-module-vm.git"
   
   prefix                            = var.prefix
-  vm_num                            = 1
- 
-  vm_name                           = "nmon"
-  vm_size                           = "Standard_D2s_v3"
+  
+	vm_num                            = var.node.vm_num
+  vm_name                           = var.node.name
+  vm_size                           = var.node.vm_size
 
   location                          = var.location
   resource_group_name               = var.rg
   tags                              = var.tags
 
-  
   subnet_id                         = var.subnet_id 
   subnet_prefix                     = var.subnet_prefix
+	subnet_ip_offset                  = var.node.subnet_ip_offset
 
-	subnet_ip_offset                  = var.subnet_ip_offset
+	vm_publisher											= var.node.vm_publisher
+	vm_offer													= var.node.vm_offer
+	vm_sku														= var.node.vm_sku
+	vm_version												= var.node.vm_version
 
   admin_username                    = var.admin_username
   admin_password                    = var.admin_password

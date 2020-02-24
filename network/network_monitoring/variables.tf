@@ -2,6 +2,8 @@ variable "prefix" {
    description = "prefix"
 }
 
+variable "node" {}
+
 variable "location" {
    description = "Location of the Virtual Machine to use for network watcher" 
 }
@@ -16,10 +18,6 @@ variable "subnet_id" {
 
 variable "subnet_prefix" {
   description = "Subnet prefix of the Virtual Machine to use for network watcher"
-}
-
-variable "subnet_ip_offset" {
-
 }
 
 variable "tags" {

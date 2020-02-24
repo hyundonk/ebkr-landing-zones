@@ -29,6 +29,8 @@ variable "prefix_length" {
   description = "Public IP Prefix length" 
 }
 
+variable "monitoring_node" {}
+
 variable "monitoring_node_ip_offset" {
   description = "IP offset for monitoring node VM"
 }

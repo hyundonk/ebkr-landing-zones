@@ -33,7 +33,6 @@ module "public_ip_prefix" {
   prefix_length                     = var.prefix_length
 }
 
-
 module "virtual_network" {
   source  = "../aztfmod/terraform-azurerm-caf-virtual-network/"
   
@@ -57,11 +56,10 @@ module "network_monitoring" {
   rg                                = local.LIVE-VNET
   tags                              = local.tags
 
+	node															= var.monitoring_node
+
   subnet_id                         = module.virtual_network.subnet_ids_map["service-management"]
   subnet_prefix                     = module.virtual_network.subnet_prefix_map["service-management"]
-  subnet_ip_offset                  = var.monitoring_node_ip_offset
-
-	#ip_address                        = cidrhost(module.virtual_network.subnet_prefix_map["service-management"], var.monitoring_node_ip_offset)
 
   admin_username                    = var.adminusername
   admin_password                    = var.adminpassword
